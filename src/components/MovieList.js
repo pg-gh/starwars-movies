@@ -17,7 +17,11 @@ const ListItem = styled.li`
 const MovieList = ({ movies, onMovieSelect }) => (
   <List>
     {movies.map((movie) => (
-      <ListItem key={movie.episode_id} onClick={() => onMovieSelect(movie)}>
+      <ListItem
+        data-testid="movie-title"
+        key={movie.episode_id}
+        onClick={() => onMovieSelect(movie)}
+      >
         {movie.title}
       </ListItem>
     ))}

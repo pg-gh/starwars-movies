@@ -13,7 +13,11 @@ const Dropdown = styled.select`
 `;
 
 const SortDropdown = ({ sortOption, setSortOption }) => (
-  <Dropdown value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
+  <Dropdown
+    data-testid="sort-dropdown"
+    value={sortOption}
+    onChange={(e) => setSortOption(e.target.value)}
+  >
     <option value="Year">Year</option>
     <option value="Episode">Episode</option>
   </Dropdown>
